@@ -76,16 +76,16 @@ function HomePage() {
   const conceptStartTime = useRef<number>(0);
   
   // Filter states
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [selectedDifficulty, setSelectedDifficulty] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedDifficulty, setSelectedDifficulty] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [quizCategory, setQuizCategory] = useState('All');
   const [quizDifficulty, setQuizDifficulty] = useState('All');
 
   // Filter materials
   const filteredMaterials = studyMaterials.filter(material => {
-    const matchesCategory = selectedCategory === '' || material.category === selectedCategory;
-    const matchesDifficulty = selectedDifficulty === '' || material.difficulty === selectedDifficulty;
+    const matchesCategory = selectedCategory === 'All' || material.category === selectedCategory;
+    const matchesDifficulty = selectedDifficulty === 'All' || material.difficulty === selectedDifficulty;
     const matchesSearch = material.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          material.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesDifficulty && matchesSearch;
@@ -93,8 +93,8 @@ function HomePage() {
 
   // Filter concepts
   const filteredConcepts = concepts.filter(concept => {
-    const matchesCategory = selectedCategory === '' || concept.category === selectedCategory;
-    const matchesDifficulty = selectedDifficulty === '' || concept.difficulty === selectedDifficulty;
+    const matchesCategory = selectedCategory === 'All' || concept.category === selectedCategory;
+    const matchesDifficulty = selectedDifficulty === 'All' || concept.difficulty === selectedDifficulty;
     const matchesSearch = concept.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          concept.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesDifficulty && matchesSearch;
