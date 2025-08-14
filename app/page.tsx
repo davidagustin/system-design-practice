@@ -81,6 +81,8 @@ function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [quizCategory, setQuizCategory] = useState('All');
   const [quizDifficulty, setQuizDifficulty] = useState('All');
+  const [quizQuestionCount, setQuizQuestionCount] = useState(10);
+  const [quizStarted, setQuizStarted] = useState(false);
 
   // Filter materials
   const filteredMaterials = studyMaterials.filter(material => {
@@ -107,6 +109,22 @@ function HomePage() {
     return matchesCategory && matchesDifficulty;
   });
 
+  // Get random subset of questions for the quiz
+  const getQuizQuestions = () => {
+    const availableQuestions = [...filteredQuizQuestions];
+    const count = Math.min(quizQuestionCount, availableQuestions.length);
+    
+    // Shuffle and take the first 'count' questions
+    for (let i = availableQuestions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [availableQuestions[i], availableQuestions[j]] = [availableQuestions[j], availableQuestions[i]];
+    }
+    
+    return availableQuestions.slice(0, count);
+  };
+
+  const quizQuestionsToShow = quizStarted ? getQuizQuestions() : [];
+
   const handleQuizAnswer = (questionId: number, answerIndex: number) => {
     setQuizAnswers(prev => ({
       ...prev,
@@ -116,18 +134,26 @@ function HomePage() {
 
   const calculateQuizScore = () => {
     let correct = 0;
-    filteredQuizQuestions.forEach(question => {
+    quizQuestionsToShow.forEach(question => {
       if (quizAnswers[question.id] === question.correctAnswer) {
         correct++;
       }
     });
-    return Math.round((correct / filteredQuizQuestions.length) * 100);
+    return Math.round((correct / quizQuestionsToShow.length) * 100);
+  };
+
+  const startQuiz = () => {
+    setQuizStarted(true);
+    setCurrentQuiz(0);
+    setQuizAnswers({});
+    setShowResults(false);
   };
 
   const resetQuiz = () => {
     setCurrentQuiz(0);
     setQuizAnswers({});
     setShowResults(false);
+    setQuizStarted(false);
   };
 
   // Progress tracking functions
@@ -557,7 +583,33 @@ function HomePage() {
                       ))}
                     </select>
                   </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Number of Questions</label>
+                    <select
+                      value={quizQuestionCount}
+                      onChange={(e) => setQuizQuestionCount(parseInt(e.target.value))}
+                      className="input-field"
+                    >
+                      <option value={5}>5 Questions</option>
+                      <option value={10}>10 Questions</option>
+                      <option value={15}>15 Questions</option>
+                      <option value={20}>20 Questions</option>
+                      <option value={30}>30 Questions</option>
+                      <option value={50}>50 Questions</option>
+                      <option value={filteredQuizQuestions.length}>All Available ({filteredQuizQuestions.length})</option>
+                    </select>
+                  </div>
                 </div>
+                {!quizStarted && filteredQuizQuestions.length > 0 && (
+                  <div className="mt-4 flex justify-center">
+                    <button
+                      onClick={startQuiz}
+                      className="btn-primary px-8 py-3 text-lg"
+                    >
+                      Start Quiz with {Math.min(quizQuestionCount, filteredQuizQuestions.length)} Questions
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -565,21 +617,25 @@ function HomePage() {
               <div className="text-center py-12">
                 <p className="text-gray-500 dark:text-gray-400">No questions found matching your criteria.</p>
               </div>
+            ) : !quizStarted ? (
+              <div className="text-center py-12">
+                <p className="text-gray-500 dark:text-gray-400">Select your quiz options and click "Start Quiz" to begin.</p>
+              </div>
             ) : !showResults ? (
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                 <div className="mb-6">
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-sm text-gray-500 dark:text-gray-400">
-                      Question {currentQuiz + 1} of {filteredQuizQuestions.length}
+                      Question {currentQuiz + 1} of {quizQuestionsToShow.length}
                     </span>
                     <span className="text-sm text-gray-500 dark:text-gray-400">
-                      {Math.round(((currentQuiz + 1) / filteredQuizQuestions.length) * 100)}% Complete
+                      {Math.round(((currentQuiz + 1) / quizQuestionsToShow.length) * 100)}% Complete
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                     <div 
                       className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                      style={{ width: `${((currentQuiz + 1) / filteredQuizQuestions.length) * 100}%` }}
+                      style={{ width: `${((currentQuiz + 1) / quizQuestionsToShow.length) * 100}%` }}
                     ></div>
                   </div>
                 </div>
@@ -587,45 +643,45 @@ function HomePage() {
                 <div className="mb-6">
                   <div className="flex items-center mb-4">
                     <span className={`badge mr-3 ${
-                      filteredQuizQuestions[currentQuiz].difficulty === 'Beginner' ? 'badge-beginner' :
-                      filteredQuizQuestions[currentQuiz].difficulty === 'Intermediate' ? 'badge-intermediate' :
+                      quizQuestionsToShow[currentQuiz].difficulty === 'Beginner' ? 'badge-beginner' :
+                      quizQuestionsToShow[currentQuiz].difficulty === 'Intermediate' ? 'badge-intermediate' :
                       'badge-advanced'
                     }`}>
-                      {filteredQuizQuestions[currentQuiz].difficulty}
+                      {quizQuestionsToShow[currentQuiz].difficulty}
                     </span>
                     <span className="badge badge-category">
-                      {filteredQuizQuestions[currentQuiz].category}
+                      {quizQuestionsToShow[currentQuiz].category}
                     </span>
                   </div>
                   
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                    {filteredQuizQuestions[currentQuiz].question}
+                    {quizQuestionsToShow[currentQuiz].question}
                   </h3>
                   
                   <div className="space-y-3">
-                    {filteredQuizQuestions[currentQuiz].options.map((option, index) => (
+                    {quizQuestionsToShow[currentQuiz].options.map((option, index) => (
                       <label
                         key={index}
                         className={`flex items-center p-4 border rounded-lg cursor-pointer transition-colors ${
-                          quizAnswers[filteredQuizQuestions[currentQuiz].id] === index
+                          quizAnswers[quizQuestionsToShow[currentQuiz].id] === index
                             ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30'
                             : 'border-gray-200 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-500'
                         }`}
                       >
                         <input
                           type="radio"
-                          name={`question-${filteredQuizQuestions[currentQuiz].id}`}
+                          name={`question-${quizQuestionsToShow[currentQuiz].id}`}
                           value={index}
-                          checked={quizAnswers[filteredQuizQuestions[currentQuiz].id] === index}
-                          onChange={() => handleQuizAnswer(filteredQuizQuestions[currentQuiz].id, index)}
+                          checked={quizAnswers[quizQuestionsToShow[currentQuiz].id] === index}
+                          onChange={() => handleQuizAnswer(quizQuestionsToShow[currentQuiz].id, index)}
                           className="sr-only"
                         />
                         <div className={`w-4 h-4 border-2 rounded-full mr-3 flex items-center justify-center ${
-                          quizAnswers[filteredQuizQuestions[currentQuiz].id] === index
+                          quizAnswers[quizQuestionsToShow[currentQuiz].id] === index
                             ? 'border-blue-500'
                             : 'border-gray-300 dark:border-gray-500'
                         }`}>
-                          {quizAnswers[filteredQuizQuestions[currentQuiz].id] === index && (
+                          {quizAnswers[quizQuestionsToShow[currentQuiz].id] === index && (
                             <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                           )}
                         </div>
@@ -644,7 +700,7 @@ function HomePage() {
                     Previous
                   </button>
                   
-                  {currentQuiz === filteredQuizQuestions.length - 1 ? (
+                  {currentQuiz === quizQuestionsToShow.length - 1 ? (
                     <button
                       onClick={handleQuizComplete}
                       className="btn-primary"
@@ -668,13 +724,13 @@ function HomePage() {
                   <div className="text-6xl font-bold text-blue-600 dark:text-blue-400 mb-4">{calculateQuizScore()}%</div>
                   <p className="text-gray-600 dark:text-gray-300">
                     You got {Object.keys(quizAnswers).filter(id => 
-                      quizAnswers[parseInt(id)] === filteredQuizQuestions.find(q => q.id === parseInt(id))?.correctAnswer
-                    ).length} out of {filteredQuizQuestions.length} questions correct.
+                      quizAnswers[parseInt(id)] === quizQuestionsToShow.find(q => q.id === parseInt(id))?.correctAnswer
+                    ).length} out of {quizQuestionsToShow.length} questions correct.
                   </p>
                 </div>
 
                 <div className="space-y-6">
-                  {filteredQuizQuestions.map((question, index) => (
+                  {quizQuestionsToShow.map((question, index) => (
                     <div key={question.id} className="border rounded-lg p-4">
                       <div className="flex items-center mb-3">
                         <span className={`badge mr-3 ${
@@ -743,7 +799,7 @@ function HomePage() {
                     onClick={resetQuiz}
                     className="btn-primary px-6 py-3"
                   >
-                    Take Quiz Again
+                    Take New Quiz
                   </button>
                 </div>
               </div>
