@@ -582,6 +582,272 @@ export const quizQuestions: QuizQuestion[] = [
     explanation: "Faceted search allows users to filter results by multiple attributes simultaneously, enabling efficient content discovery. Users can combine different filters (e.g., category, difficulty, duration) to narrow down results and find exactly what they're looking for.",
     category: "Search",
     difficulty: "Intermediate"
+  },
+  {
+    id: 42,
+    question: "What does ACID stand for in database transactions?",
+    options: [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Availability, Consistency, Integrity, Durability",
+      "Atomicity, Consistency, Integrity, Data",
+      "Availability, Consistency, Isolation, Data"
+    ],
+    correctAnswer: 0,
+    explanation: "ACID stands for Atomicity (all operations succeed or fail together), Consistency (data remains in a valid state), Isolation (concurrent transactions don't interfere), and Durability (committed transactions persist).",
+    category: "Databases",
+    difficulty: "Intermediate"
+  },
+  {
+    id: 43,
+    question: "What is the main advantage of the Saga pattern over distributed transactions?",
+    options: [
+      "Better performance",
+      "Better scalability and fault tolerance",
+      "Simpler implementation",
+      "Lower cost"
+    ],
+    correctAnswer: 1,
+    explanation: "The Saga pattern provides better scalability and fault tolerance compared to distributed transactions. It breaks down large transactions into local transactions with compensation actions, avoiding the complexity and performance issues of distributed transactions.",
+    category: "Architecture",
+    difficulty: "Advanced"
+  },
+  {
+    id: 44,
+    question: "Which type of database index is best for range queries?",
+    options: [
+      "Hash Index",
+      "B-Tree Index",
+      "Bitmap Index",
+      "Full-Text Index"
+    ],
+    correctAnswer: 1,
+    explanation: "B-Tree indexes are best for range queries because they maintain sorted order, allowing efficient traversal of values within a range. Hash indexes are only efficient for equality lookups.",
+    category: "Performance",
+    difficulty: "Intermediate"
+  },
+  {
+    id: 45,
+    question: "What is the main principle of RESTful API design?",
+    options: [
+      "Stateless communication",
+      "Stateful sessions",
+      "Complex routing",
+      "Binary protocols"
+    ],
+    correctAnswer: 0,
+    explanation: "Stateless communication is a core principle of RESTful API design. Each request contains all the information needed to process it, making the API scalable and easier to cache.",
+    category: "Architecture",
+    difficulty: "Intermediate"
+  },
+  {
+    id: 46,
+    question: "What is the main advantage of GraphQL over REST APIs?",
+    options: [
+      "Better performance",
+      "Flexible data fetching - clients can request exactly what they need",
+      "Simpler implementation",
+      "Better caching"
+    ],
+    correctAnswer: 1,
+    explanation: "GraphQL's main advantage is flexible data fetching - clients can request exactly what they need and nothing more. This prevents over-fetching and under-fetching of data, making APIs more efficient.",
+    category: "Architecture",
+    difficulty: "Intermediate"
+  },
+  {
+    id: 47,
+    question: "What is the primary purpose of a service mesh?",
+    options: [
+      "To provide load balancing",
+      "To handle service-to-service communication, security, and observability",
+      "To improve database performance",
+      "To provide caching"
+    ],
+    correctAnswer: 1,
+    explanation: "A service mesh is a dedicated infrastructure layer that handles service-to-service communication, security, and observability in microservices architectures. It provides features like traffic management, security policies, and distributed tracing.",
+    category: "Infrastructure",
+    difficulty: "Advanced"
+  },
+  {
+    id: 48,
+    question: "What is the main benefit of Event Sourcing?",
+    options: [
+      "Better performance",
+      "Complete audit trail and ability to replay events",
+      "Simpler data model",
+      "Lower storage requirements"
+    ],
+    correctAnswer: 1,
+    explanation: "Event Sourcing provides a complete audit trail and the ability to replay events to reconstruct any point in time. This enables powerful features like temporal queries and debugging historical issues.",
+    category: "Architecture",
+    difficulty: "Advanced"
+  },
+  {
+    id: 49,
+    question: "What is the main challenge with distributed tracing?",
+    options: [
+      "Network latency",
+      "Managing trace context across service boundaries",
+      "Data encryption",
+      "Load balancing"
+    ],
+    correctAnswer: 1,
+    explanation: "The main challenge with distributed tracing is managing trace context across service boundaries. This requires proper propagation of trace IDs and span information through all services in the request path.",
+    category: "Observability",
+    difficulty: "Intermediate"
+  },
+  {
+    id: 50,
+    question: "Which Redis data structure is best for implementing a leaderboard?",
+    options: [
+      "Redis Strings",
+      "Redis Lists",
+      "Redis Sorted Sets",
+      "Redis Hashes"
+    ],
+    correctAnswer: 2,
+    explanation: "Redis Sorted Sets are perfect for implementing leaderboards because they maintain elements in sorted order by score. This allows efficient ranking operations and range queries.",
+    category: "Performance",
+    difficulty: "Intermediate"
+  },
+  {
+    id: 51,
+    question: "What is the main advantage of the Raft consensus algorithm over Paxos?",
+    options: [
+      "Better performance",
+      "Easier to understand and implement",
+      "Higher availability",
+      "Lower network overhead"
+    ],
+    correctAnswer: 1,
+    explanation: "Raft is designed to be easier to understand and implement compared to Paxos, while providing the same safety guarantees. This makes it more accessible for developers and reduces the chance of implementation errors.",
+    category: "Theory",
+    difficulty: "Advanced"
+  },
+  {
+    id: 52,
+    question: "What is the primary purpose of time series databases?",
+    options: [
+      "To store relational data",
+      "To efficiently store and query time-based data",
+      "To provide ACID transactions",
+      "To support complex joins"
+    ],
+    correctAnswer: 1,
+    explanation: "Time series databases are specifically designed to efficiently store and query time-based data. They optimize for time-based queries, provide efficient compression, and support aggregation operations over time periods.",
+    category: "Databases",
+    difficulty: "Advanced"
+  },
+  {
+    id: 53,
+    question: "What is the main challenge with machine learning infrastructure?",
+    options: [
+      "Data storage",
+      "Managing the entire ML lifecycle from development to production",
+      "Network latency",
+      "User authentication"
+    ],
+    correctAnswer: 1,
+    explanation: "The main challenge with ML infrastructure is managing the entire ML lifecycle from development to production, including data pipelines, model training, deployment, monitoring, and continuous improvement.",
+    category: "Infrastructure",
+    difficulty: "Advanced"
+  },
+  {
+    id: 54,
+    question: "What is the key characteristic of stream processing systems?",
+    options: [
+      "Batch processing",
+      "Real-time processing of continuous data streams",
+      "Static data analysis",
+      "Offline computation"
+    ],
+    correctAnswer: 1,
+    explanation: "Stream processing systems are characterized by real-time processing of continuous data streams. They handle high-throughput, low-latency data processing with fault tolerance and exactly-once semantics.",
+    category: "Architecture",
+    difficulty: "Advanced"
+  },
+  {
+    id: 55,
+    question: "What is the main benefit of blockchain technology?",
+    options: [
+      "High performance",
+      "Secure, transparent, and tamper-proof record keeping without central authority",
+      "Low cost",
+      "Simple implementation"
+    ],
+    correctAnswer: 1,
+    explanation: "Blockchain technology provides secure, transparent, and tamper-proof record keeping without requiring a central authority. It uses cryptographic techniques and consensus mechanisms to ensure data integrity and trust.",
+    category: "Architecture",
+    difficulty: "Advanced"
+  },
+  {
+    id: 56,
+    question: "What is the primary advantage of edge computing?",
+    options: [
+      "Lower cost",
+      "Reduced latency by processing data closer to the source",
+      "Better security",
+      "Simpler architecture"
+    ],
+    correctAnswer: 1,
+    explanation: "Edge computing reduces latency by processing data closer to the source of data generation. This improves real-time processing capabilities and reduces bandwidth usage by processing data locally.",
+    category: "Infrastructure",
+    difficulty: "Advanced"
+  },
+  {
+    id: 57,
+    question: "What is the main benefit of a multi-cloud strategy?",
+    options: [
+      "Lower cost",
+      "Avoiding vendor lock-in and optimizing costs and capabilities",
+      "Better performance",
+      "Simpler management"
+    ],
+    correctAnswer: 1,
+    explanation: "Multi-cloud strategy helps avoid vendor lock-in and allows organizations to optimize costs and leverage the best capabilities from each cloud provider. It provides flexibility, redundancy, and cost optimization.",
+    category: "Infrastructure",
+    difficulty: "Advanced"
+  },
+  {
+    id: 58,
+    question: "What is the core principle of data mesh architecture?",
+    options: [
+      "Centralized data management",
+      "Treating data as a product with domain-oriented ownership",
+      "Single data warehouse",
+      "Batch processing only"
+    ],
+    correctAnswer: 1,
+    explanation: "Data mesh treats data as a product with domain-oriented ownership. It emphasizes decentralized data ownership, self-serve data platforms, and federated governance for scalable data architecture.",
+    category: "Architecture",
+    difficulty: "Advanced"
+  },
+  {
+    id: 59,
+    question: "What is the purpose of chaos engineering?",
+    options: [
+      "To improve performance",
+      "To proactively test system resilience by intentionally injecting failures",
+      "To reduce costs",
+      "To simplify architecture"
+    ],
+    correctAnswer: 1,
+    explanation: "Chaos engineering proactively tests system resilience by intentionally injecting failures in production environments. This helps identify weaknesses, improve system reliability, and build confidence in system behavior under failure conditions.",
+    category: "Reliability",
+    difficulty: "Advanced"
+  },
+  {
+    id: 60,
+    question: "What is the fundamental principle of zero trust security?",
+    options: [
+      "Trust but verify",
+      "Never trust, always verify",
+      "Trust internal networks",
+      "Trust authenticated users"
+    ],
+    correctAnswer: 1,
+    explanation: "Zero trust security follows the principle of 'never trust, always verify.' It assumes no trust and requires verification for every access request, emphasizing identity verification, least privilege access, and continuous monitoring.",
+    category: "Security",
+    difficulty: "Advanced"
   }
 ];
 

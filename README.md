@@ -2,9 +2,15 @@
 
 A comprehensive, interactive learning platform designed to help developers master system design interviews through structured study materials, core concepts, interactive quizzes, and progress tracking.
 
+## 🌐 Live Demo
+
+**[🚀 Try it live](https://system-design-practice.vercel.app/)**
+
+Experience the full application with dark mode, advanced filtering, and all features available online.
+
 ## 🚀 Features
 
-### 📚 **Comprehensive Study Materials (25 Topics)**
+### 📚 **Comprehensive Study Materials (50 Topics)**
 - **Load Balancing Fundamentals** - Core principles and techniques
 - **Database Replication Strategies** - Master-slave, multi-region, read replicas
 - **Caching Strategies and Patterns** - Cache-aside, write-through, distributed caching
@@ -19,9 +25,33 @@ A comprehensive, interactive learning platform designed to help developers maste
 - **Real-Time Chat System** - WebSocket implementation, message delivery
 - **URL Shortener Service** - Analytics tracking, redirect handling
 - **Distributed File Storage** - Replication, fault tolerance
-- **And 11 more comprehensive topics...**
+- **ACID Properties and Database Transactions** - Fundamental database consistency
+- **Distributed Transactions and Saga Pattern** - Cross-service transaction management
+- **Database Indexing and Query Optimization** - Performance optimization techniques
+- **API Design and RESTful Architecture** - Scalable API design principles
+- **GraphQL and Modern API Design** - Flexible data fetching
+- **Service Mesh and Istio** - Service-to-service communication
+- **Database Partitioning and Sharding** - Horizontal database scaling
+- **Event Sourcing and CQRS** - Event-driven architecture patterns
+- **Distributed Caching with Redis** - High-performance caching solutions
+- **Monitoring and Observability** - System monitoring and debugging
+- **Distributed Consensus Algorithms** - Raft, Paxos, Byzantine fault tolerance
+- **Time Series Databases and Analytics** - IoT data, monitoring, real-time analytics
+- **Machine Learning Infrastructure** - ML pipelines, model serving, MLOps
+- **Real-time Streaming Systems** - Kafka Streams, Flink, stream processing
+- **Blockchain and Distributed Ledgers** - Consensus mechanisms, smart contracts
+- **Edge Computing and IoT Systems** - Edge processing, device management
+- **Multi-Cloud and Hybrid Cloud Strategies** - Vendor lock-in avoidance, cost optimization
+- **Data Mesh Architecture** - Decentralized data ownership, data products
+- **Chaos Engineering and Resilience Testing** - Proactive failure testing, system resilience
+- **Zero Trust Security Architecture** - Identity verification, continuous monitoring
+- **Serverless Architecture Patterns** - FaaS, event-driven, cost optimization
+- **Data Pipeline and ETL Systems** - Data ingestion, transformation, orchestration
+- **Content Delivery and CDN Optimization** - Global performance, edge caching
+- **Database Migration and Schema Evolution** - Zero-downtime migrations, backward compatibility
+- **API Gateway and BFF Patterns** - Service aggregation, authentication, rate limiting
 
-### 🧠 **Core Concepts (21 Concepts)**
+### 🧠 **Core Concepts (40 Concepts)**
 - **CAP Theorem and Consistency Models** - Fundamental distributed systems theory
 - **Consistent Hashing** - Distributed system partitioning
 - **Load Balancing** - Traffic distribution algorithms
@@ -43,8 +73,27 @@ A comprehensive, interactive learning platform designed to help developers maste
 - **Retry Pattern** - Resilience strategies
 - **Health Check Pattern** - System monitoring
 - **Search and Filtering Systems** - Content discovery
+- **ACID Properties** - Database transaction guarantees
+- **Saga Pattern** - Distributed transaction management
+- **Database Indexing** - Performance optimization
+- **RESTful API Design** - Scalable API architecture
+- **GraphQL** - Flexible data querying
+- **Service Mesh** - Service communication infrastructure
+- **Event Sourcing** - Event-driven state management
+- **Distributed Tracing** - Request flow monitoring
+- **Redis Data Structures** - Caching and data storage
+- **Raft Consensus Algorithm** - Distributed consensus and leader election
+- **Time Series Databases** - Temporal data storage and analytics
+- **Machine Learning Infrastructure** - ML lifecycle and model management
+- **Stream Processing** - Real-time data processing and analytics
+- **Blockchain Technology** - Distributed ledger and consensus mechanisms
+- **Edge Computing** - Local processing and IoT infrastructure
+- **Multi-Cloud Strategy** - Vendor lock-in avoidance and cost optimization
+- **Data Mesh** - Decentralized data architecture and governance
+- **Chaos Engineering** - Proactive resilience testing and failure injection
+- **Zero Trust Security** - Identity verification and continuous monitoring
 
-### 🎯 **Interactive Quiz System (41 Questions)**
+### 🎯 **Interactive Quiz System (60 Questions)**
 - **Beginner Level (12 questions)** - Fundamental concepts and patterns
 - **Intermediate Level (20 questions)** - Practical implementations and trade-offs
 - **Advanced Level (9 questions)** - Complex scenarios and advanced patterns
@@ -67,6 +116,13 @@ A comprehensive, interactive learning platform designed to help developers maste
 - **Accessibility features** - Keyboard navigation and screen reader support
 - **🌙 Dark Mode Support** - Toggle between light and dark themes with persistent preference
 - **Advanced Filtering** - Search and filter materials and concepts by category and difficulty
+
+### 📚 **Comprehensive Content Coverage**
+- **50 Study Materials** - From fundamentals to cutting-edge technologies
+- **40 Core Concepts** - Essential patterns and advanced principles  
+- **60 Quiz Questions** - Progressive difficulty with real-world scenarios
+- **19 Categories** - Organized learning paths for systematic study
+- **3 Difficulty Levels** - Beginner, Intermediate, and Advanced progression
 
 ## 🛠️ Technical Stack
 
@@ -166,10 +222,10 @@ npm start
 
 ## 📊 Content Statistics
 
-- **25 Study Materials** - Comprehensive coverage of system design topics
-- **21 Core Concepts** - Essential patterns and principles
-- **41 Quiz Questions** - Progressive difficulty levels
-- **18 Categories** - Organized learning paths
+- **50 Study Materials** - Comprehensive coverage of system design topics
+- **40 Core Concepts** - Essential patterns and principles
+- **60 Quiz Questions** - Progressive difficulty levels
+- **19 Categories** - Organized learning paths
 - **3 Difficulty Levels** - Beginner, Intermediate, Advanced
 
 ## 🎯 Learning Paths

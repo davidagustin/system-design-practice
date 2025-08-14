@@ -936,6 +936,931 @@ export const studyMaterials: StudyMaterial[] = [
       "Object Storage Guide",
       "Distributed Systems Book"
     ]
+  },
+  {
+    id: 26,
+    title: "ACID Properties and Database Transactions",
+    description: "Master the fundamental ACID properties that ensure data integrity and consistency in database systems.",
+    category: "Databases",
+    difficulty: "Intermediate",
+    duration: "50 min",
+    topics: [
+      "Atomicity - All or Nothing Operations",
+      "Consistency - Data Integrity Rules",
+      "Isolation - Concurrent Transaction Handling",
+      "Durability - Permanent Data Storage",
+      "Transaction Management",
+      "Concurrency Control"
+    ],
+    concepts: [
+      "ACID Compliance",
+      "Two-Phase Commit Protocol",
+      "Serializable Isolation",
+      "Read Committed",
+      "Read Uncommitted",
+      "Repeatable Read"
+    ],
+    examples: [
+      "PostgreSQL ACID Implementation",
+      "MySQL InnoDB Engine",
+      "Oracle Database Transactions",
+      "SQL Server Transaction Logs",
+      "Distributed ACID Systems"
+    ],
+    resources: [
+      "Database System Concepts Book",
+      "ACID Properties Guide",
+      "Transaction Management Tutorial",
+      "Concurrency Control Patterns"
+    ]
+  },
+  {
+    id: 27,
+    title: "Distributed Transactions and Saga Pattern",
+    description: "Learn how to handle transactions across multiple services and databases in distributed systems.",
+    category: "Architecture",
+    difficulty: "Advanced",
+    duration: "65 min",
+    topics: [
+      "Distributed Transaction Challenges",
+      "Saga Pattern Implementation",
+      "Choreography vs Orchestration",
+      "Compensation Actions",
+      "Event Sourcing Integration",
+      "CQRS with Sagas"
+    ],
+    concepts: [
+      "Saga Pattern",
+      "Compensation Logic",
+      "Event-Driven Sagas",
+      "Orchestration Pattern",
+      "Choreography Pattern",
+      "Distributed Consistency"
+    ],
+    examples: [
+      "E-commerce Order Processing",
+      "Banking Money Transfers",
+      "Travel Booking Systems",
+      "Inventory Management",
+      "Payment Processing Flows"
+    ],
+    resources: [
+      "Saga Pattern Paper",
+      "Distributed Transactions Guide",
+      "Event Sourcing Book",
+      "Microservices Patterns"
+    ]
+  },
+  {
+    id: 28,
+    title: "Database Indexing and Query Optimization",
+    description: "Optimize database performance through effective indexing strategies and query optimization techniques.",
+    category: "Performance",
+    difficulty: "Intermediate",
+    duration: "55 min",
+    topics: [
+      "B-Tree Indexes",
+      "Hash Indexes",
+      "Composite Indexes",
+      "Covering Indexes",
+      "Query Execution Plans",
+      "Index Maintenance"
+    ],
+    concepts: [
+      "Index Selectivity",
+      "Index Cardinality",
+      "Query Optimization",
+      "Execution Plan Analysis",
+      "Index Fragmentation",
+      "Statistics Management"
+    ],
+    examples: [
+      "MySQL Index Optimization",
+      "PostgreSQL Query Planner",
+      "MongoDB Index Strategies",
+      "Oracle Database Tuning",
+      "SQL Server Index Design"
+    ],
+    resources: [
+      "Database Performance Tuning",
+      "Index Design Patterns",
+      "Query Optimization Guide",
+      "Database Internals Book"
+    ]
+  },
+  {
+    id: 29,
+    title: "API Design and RESTful Architecture",
+    description: "Design scalable and maintainable APIs following REST principles and best practices.",
+    category: "Architecture",
+    difficulty: "Intermediate",
+    duration: "45 min",
+    topics: [
+      "REST Principles",
+      "HTTP Methods and Status Codes",
+      "API Versioning Strategies",
+      "Authentication and Authorization",
+      "Rate Limiting",
+      "API Documentation"
+    ],
+    concepts: [
+      "RESTful Design",
+      "HATEOAS",
+      "API Gateway Pattern",
+      "OAuth 2.0",
+      "JWT Tokens",
+      "OpenAPI Specification"
+    ],
+    examples: [
+      "GitHub REST API",
+      "Twitter API",
+      "Stripe Payment API",
+      "AWS API Gateway",
+      "Swagger Documentation"
+    ],
+    resources: [
+      "REST API Design Guide",
+      "API Design Patterns",
+      "OAuth 2.0 Specification",
+      "OpenAPI Documentation"
+    ]
+  },
+  {
+    id: 30,
+    title: "GraphQL and Modern API Design",
+    description: "Explore GraphQL as an alternative to REST APIs for flexible and efficient data fetching.",
+    category: "Architecture",
+    difficulty: "Intermediate",
+    duration: "50 min",
+    topics: [
+      "GraphQL Schema Design",
+      "Resolvers and Data Fetching",
+      "Query and Mutation Types",
+      "Subscriptions",
+      "Schema Stitching",
+      "Performance Optimization"
+    ],
+    concepts: [
+      "GraphQL Schema",
+      "Resolver Functions",
+      "N+1 Query Problem",
+      "DataLoader Pattern",
+      "Schema Federation",
+      "GraphQL Caching"
+    ],
+    examples: [
+      "GitHub GraphQL API",
+      "Shopify GraphQL",
+      "Apollo Server",
+      "GraphQL Federation",
+      "Relay Framework"
+    ],
+    resources: [
+      "GraphQL Official Documentation",
+      "Apollo GraphQL Platform",
+      "GraphQL Best Practices",
+      "Schema Design Guide"
+    ]
+  },
+  {
+    id: 31,
+    title: "Service Mesh and Istio",
+    description: "Implement service-to-service communication, security, and observability using service mesh architecture.",
+    category: "Infrastructure",
+    difficulty: "Advanced",
+    duration: "70 min",
+    topics: [
+      "Service Mesh Architecture",
+      "Istio Components",
+      "Traffic Management",
+      "Security Policies",
+      "Observability",
+      "Performance Optimization"
+    ],
+    concepts: [
+      "Sidecar Pattern",
+      "Envoy Proxy",
+      "Traffic Splitting",
+      "Circuit Breaking",
+      "Distributed Tracing",
+      "mTLS Encryption"
+    ],
+    examples: [
+      "Istio Service Mesh",
+      "Linkerd",
+      "Consul Connect",
+      "Kubernetes Integration",
+      "Multi-cluster Mesh"
+    ],
+    resources: [
+      "Istio Documentation",
+      "Service Mesh Patterns",
+      "Envoy Proxy Guide",
+      "Kubernetes Service Mesh"
+    ]
+  },
+  {
+    id: 32,
+    title: "Database Partitioning and Sharding",
+    description: "Scale databases horizontally through partitioning and sharding strategies for massive data growth.",
+    category: "Databases",
+    difficulty: "Advanced",
+    duration: "75 min",
+    topics: [
+      "Horizontal vs Vertical Partitioning",
+      "Sharding Strategies",
+      "Shard Key Selection",
+      "Cross-Shard Queries",
+      "Shard Rebalancing",
+      "Global Secondary Indexes"
+    ],
+    concepts: [
+      "Hash-Based Sharding",
+      "Range-Based Sharding",
+      "Directory-Based Sharding",
+      "Consistent Hashing",
+      "Shard Mapping",
+      "Distributed Joins"
+    ],
+    examples: [
+      "MongoDB Sharding",
+      "MySQL Partitioning",
+      "PostgreSQL Partitioning",
+      "Cassandra Partitioning",
+      "DynamoDB Partitioning"
+    ],
+    resources: [
+      "Database Sharding Guide",
+      "Partitioning Strategies",
+      "Distributed Databases",
+      "Sharding Best Practices"
+    ]
+  },
+  {
+    id: 33,
+    title: "Event Sourcing and CQRS",
+    description: "Build event-driven systems using Event Sourcing and Command Query Responsibility Segregation patterns.",
+    category: "Architecture",
+    difficulty: "Advanced",
+    duration: "80 min",
+    topics: [
+      "Event Sourcing Fundamentals",
+      "Event Store Design",
+      "CQRS Pattern",
+      "Event Replay",
+      "Snapshot Strategies",
+      "Event Versioning"
+    ],
+    concepts: [
+      "Event Store",
+      "Command Handlers",
+      "Query Handlers",
+      "Event Replay",
+      "Snapshot Aggregates",
+      "Event Schema Evolution"
+    ],
+    examples: [
+      "EventStore Database",
+      "Axon Framework",
+      "Apache Kafka",
+      "Event Sourcing with Redis",
+      "CQRS with EventStore"
+    ],
+    resources: [
+      "Event Sourcing Book",
+      "CQRS Pattern Guide",
+      "EventStore Documentation",
+      "Domain-Driven Design"
+    ]
+  },
+  {
+    id: 34,
+    title: "Distributed Caching with Redis",
+    description: "Implement high-performance distributed caching solutions using Redis and advanced caching patterns.",
+    category: "Performance",
+    difficulty: "Intermediate",
+    duration: "60 min",
+    topics: [
+      "Redis Data Structures",
+      "Distributed Caching",
+      "Cache Patterns",
+      "Redis Cluster",
+      "Persistence Strategies",
+      "Performance Tuning"
+    ],
+    concepts: [
+      "Redis Strings",
+      "Redis Lists",
+      "Redis Sets",
+      "Redis Sorted Sets",
+      "Redis Hashes",
+      "Redis Streams"
+    ],
+    examples: [
+      "Redis Cluster Setup",
+      "Redis Sentinel",
+      "Redis with Spring Boot",
+      "Redis Caching Patterns",
+      "Redis Performance Optimization"
+    ],
+    resources: [
+      "Redis Documentation",
+      "Redis Cluster Guide",
+      "Caching Patterns",
+      "Redis Performance Tuning"
+    ]
+  },
+  {
+    id: 35,
+    title: "Monitoring and Observability",
+    description: "Implement comprehensive monitoring, logging, and observability solutions for distributed systems.",
+    category: "Observability",
+    difficulty: "Intermediate",
+    duration: "55 min",
+    topics: [
+      "Application Monitoring",
+      "Distributed Tracing",
+      "Centralized Logging",
+      "Metrics Collection",
+      "Alerting Systems",
+      "Performance Dashboards"
+    ],
+    concepts: [
+      "Three Pillars of Observability",
+      "Distributed Tracing",
+      "Structured Logging",
+      "Metrics and KPIs",
+      "Alert Management",
+      "SLA Monitoring"
+    ],
+    examples: [
+      "Prometheus and Grafana",
+      "Jaeger Distributed Tracing",
+      "ELK Stack (Elasticsearch, Logstash, Kibana)",
+      "Datadog Monitoring",
+      "New Relic APM"
+    ],
+    resources: [
+      "Observability Engineering",
+      "Distributed Tracing Guide",
+      "Monitoring Best Practices",
+      "ELK Stack Documentation"
+    ]
+  },
+  {
+    id: 36,
+    title: "Distributed Consensus Algorithms",
+    description: "Master consensus algorithms like Raft and Paxos for building reliable distributed systems.",
+    category: "Theory",
+    difficulty: "Advanced",
+    duration: "75 min",
+    topics: [
+      "Raft Consensus Algorithm",
+      "Paxos Protocol",
+      "Byzantine Fault Tolerance",
+      "Leader Election",
+      "Log Replication",
+      "Safety and Liveness Properties"
+    ],
+    concepts: [
+      "Leader Election",
+      "Log Replication",
+      "Safety Properties",
+      "Liveness Properties",
+      "Network Partitions",
+      "Fault Tolerance"
+    ],
+    examples: [
+      "Kubernetes etcd using Raft",
+      "Consul using Raft",
+      "Apache ZooKeeper",
+      "Distributed databases",
+      "Blockchain consensus"
+    ],
+    resources: [
+      "Raft Paper",
+      "Paxos Made Simple",
+      "Distributed Systems Book",
+      "Consensus Algorithms Guide"
+    ]
+  },
+  {
+    id: 37,
+    title: "Time Series Databases and Analytics",
+    description: "Design systems for storing and analyzing time-series data at scale.",
+    category: "Databases",
+    difficulty: "Advanced",
+    duration: "65 min",
+    topics: [
+      "Time Series Data Characteristics",
+      "Compression Techniques",
+      "Retention Policies",
+      "Aggregation Strategies",
+      "Query Optimization",
+      "Real-time Analytics"
+    ],
+    concepts: [
+      "Time Series Compression",
+      "Downsampling",
+      "Rollup Aggregations",
+      "Time Bucketing",
+      "Data Retention",
+      "Analytics Queries"
+    ],
+    examples: [
+      "InfluxDB",
+      "TimescaleDB",
+      "Prometheus",
+      "OpenTSDB",
+      "IoT Data Analytics"
+    ],
+    resources: [
+      "Time Series Database Design",
+      "InfluxDB Documentation",
+      "Prometheus Best Practices",
+      "IoT Analytics Guide"
+    ]
+  },
+  {
+    id: 38,
+    title: "Machine Learning Infrastructure",
+    description: "Build scalable infrastructure for machine learning model training and serving.",
+    category: "Infrastructure",
+    difficulty: "Advanced",
+    duration: "80 min",
+    topics: [
+      "ML Pipeline Architecture",
+      "Model Training Infrastructure",
+      "Model Serving Patterns",
+      "Feature Stores",
+      "A/B Testing for ML",
+      "Model Monitoring"
+    ],
+    concepts: [
+      "ML Pipeline",
+      "Feature Engineering",
+      "Model Versioning",
+      "Model Serving",
+      "A/B Testing",
+      "Model Drift"
+    ],
+    examples: [
+      "Kubeflow",
+      "MLflow",
+      "TensorFlow Serving",
+      "Feature Store (Feast)",
+      "Model Monitoring"
+    ],
+    resources: [
+      "ML Infrastructure Design",
+      "Kubeflow Documentation",
+      "MLOps Best Practices",
+      "Feature Store Architecture"
+    ]
+  },
+  {
+    id: 39,
+    title: "Real-time Streaming Systems",
+    description: "Design systems for processing real-time data streams at scale.",
+    category: "Architecture",
+    difficulty: "Advanced",
+    duration: "70 min",
+    topics: [
+      "Stream Processing Architecture",
+      "Event Time vs Processing Time",
+      "Watermarking",
+      "State Management",
+      "Fault Tolerance",
+      "Scalability Patterns"
+    ],
+    concepts: [
+      "Stream Processing",
+      "Event Time Processing",
+      "Watermarks",
+      "Stateful Processing",
+      "Exactly Once Semantics",
+      "Backpressure Handling"
+    ],
+    examples: [
+      "Apache Kafka Streams",
+      "Apache Flink",
+      "Apache Storm",
+      "Spark Streaming",
+      "Real-time Analytics"
+    ],
+    resources: [
+      "Stream Processing Design",
+      "Kafka Streams Guide",
+      "Flink Documentation",
+      "Real-time Systems Book"
+    ]
+  },
+  {
+    id: 40,
+    title: "Blockchain and Distributed Ledgers",
+    description: "Understand blockchain technology and design decentralized systems.",
+    category: "Architecture",
+    difficulty: "Advanced",
+    duration: "85 min",
+    topics: [
+      "Blockchain Fundamentals",
+      "Consensus Mechanisms",
+      "Smart Contracts",
+      "Cryptographic Primitives",
+      "Scalability Solutions",
+      "Interoperability"
+    ],
+    concepts: [
+      "Proof of Work",
+      "Proof of Stake",
+      "Smart Contracts",
+      "Cryptographic Hashing",
+      "Merkle Trees",
+      "Layer 2 Solutions"
+    ],
+    examples: [
+      "Bitcoin Network",
+      "Ethereum Platform",
+      "Hyperledger Fabric",
+      "Polkadot",
+      "DeFi Applications"
+    ],
+    resources: [
+      "Bitcoin Whitepaper",
+      "Ethereum Documentation",
+      "Blockchain Architecture",
+      "Smart Contract Security"
+    ]
+  },
+  {
+    id: 41,
+    title: "Edge Computing and IoT Systems",
+    description: "Design systems that process data at the edge for IoT and mobile applications.",
+    category: "Infrastructure",
+    difficulty: "Advanced",
+    duration: "75 min",
+    topics: [
+      "Edge Computing Architecture",
+      "IoT Device Management",
+      "Edge Analytics",
+      "Data Synchronization",
+      "Security at Edge",
+      "Latency Optimization"
+    ],
+    concepts: [
+      "Edge Computing",
+      "Fog Computing",
+      "Edge Analytics",
+      "Device Management",
+      "Data Synchronization",
+      "Edge Security"
+    ],
+    examples: [
+      "AWS Greengrass",
+      "Azure IoT Edge",
+      "Google Cloud IoT",
+      "Industrial IoT",
+      "Smart Cities"
+    ],
+    resources: [
+      "Edge Computing Guide",
+      "IoT Architecture",
+      "Edge Security Best Practices",
+      "IoT Device Management"
+    ]
+  },
+  {
+    id: 42,
+    title: "Multi-Cloud and Hybrid Cloud Strategies",
+    description: "Design systems that span multiple cloud providers and on-premises infrastructure.",
+    category: "Infrastructure",
+    difficulty: "Advanced",
+    duration: "70 min",
+    topics: [
+      "Multi-Cloud Architecture",
+      "Cloud Portability",
+      "Data Sovereignty",
+      "Cost Optimization",
+      "Vendor Lock-in Avoidance",
+      "Unified Management"
+    ],
+    concepts: [
+      "Multi-Cloud",
+      "Hybrid Cloud",
+      "Cloud Portability",
+      "Data Sovereignty",
+      "Cost Optimization",
+      "Vendor Lock-in"
+    ],
+    examples: [
+      "Kubernetes Multi-Cloud",
+      "Terraform Multi-Cloud",
+      "Cloud Native Tools",
+      "Multi-Region Deployments",
+      "Hybrid Cloud Solutions"
+    ],
+    resources: [
+      "Multi-Cloud Strategy",
+      "Kubernetes Multi-Cloud",
+      "Terraform Best Practices",
+      "Cloud Portability Guide"
+    ]
+  },
+  {
+    id: 43,
+    title: "Data Mesh Architecture",
+    description: "Implement data mesh principles for decentralized data ownership and governance.",
+    category: "Architecture",
+    difficulty: "Advanced",
+    duration: "80 min",
+    topics: [
+      "Data Mesh Principles",
+      "Domain-Oriented Data",
+      "Data Product Design",
+      "Self-Serve Data Platform",
+      "Federated Governance",
+      "Data Observability"
+    ],
+    concepts: [
+      "Data Mesh",
+      "Domain-Driven Design",
+      "Data Products",
+      "Self-Serve Platform",
+      "Federated Governance",
+      "Data Observability"
+    ],
+    examples: [
+      "Netflix Data Mesh",
+      "Uber Data Platform",
+      "Spotify Data Mesh",
+      "Data Product Catalogs",
+      "Self-Serve Analytics"
+    ],
+    resources: [
+      "Data Mesh Book",
+      "Domain-Driven Design",
+      "Data Product Design",
+      "Data Governance Guide"
+    ]
+  },
+  {
+    id: 44,
+    title: "Chaos Engineering and Resilience Testing",
+    description: "Build resilient systems through proactive failure testing and chaos engineering.",
+    category: "Reliability",
+    difficulty: "Advanced",
+    duration: "65 min",
+    topics: [
+      "Chaos Engineering Principles",
+      "Failure Injection",
+      "Resilience Testing",
+      "Circuit Breaker Patterns",
+      "Bulkhead Pattern",
+      "Graceful Degradation"
+    ],
+    concepts: [
+      "Chaos Engineering",
+      "Failure Injection",
+      "Resilience Testing",
+      "Circuit Breaker",
+      "Bulkhead Pattern",
+      "Graceful Degradation"
+    ],
+    examples: [
+      "Netflix Chaos Monkey",
+      "Gremlin Chaos Engineering",
+      "Chaos Mesh",
+      "Resilience Testing",
+      "Production Testing"
+    ],
+    resources: [
+      "Chaos Engineering Book",
+      "Netflix Chaos Engineering",
+      "Resilience Patterns",
+      "Production Testing Guide"
+    ]
+  },
+  {
+    id: 45,
+    title: "Zero Trust Security Architecture",
+    description: "Implement zero trust security principles for modern distributed systems.",
+    category: "Security",
+    difficulty: "Advanced",
+    duration: "70 min",
+    topics: [
+      "Zero Trust Principles",
+      "Identity and Access Management",
+      "Network Segmentation",
+      "Continuous Verification",
+      "Least Privilege Access",
+      "Security Monitoring"
+    ],
+    concepts: [
+      "Zero Trust",
+      "Identity Management",
+      "Access Control",
+      "Network Segmentation",
+      "Continuous Verification",
+      "Security Monitoring"
+    ],
+    examples: [
+      "Google BeyondCorp",
+      "AWS Zero Trust",
+      "Azure Zero Trust",
+      "Identity Providers",
+      "Security Monitoring"
+    ],
+    resources: [
+      "Zero Trust Architecture",
+      "Identity Management",
+      "Security Best Practices",
+      "Zero Trust Implementation"
+    ]
+  },
+  {
+    id: 46,
+    title: "Serverless Architecture Patterns",
+    description: "Design scalable applications using serverless computing and event-driven architecture.",
+    category: "Architecture",
+    difficulty: "Intermediate",
+    duration: "60 min",
+    topics: [
+      "Serverless Computing",
+      "Function as a Service",
+      "Event-Driven Architecture",
+      "Cold Start Optimization",
+      "State Management",
+      "Cost Optimization"
+    ],
+    concepts: [
+      "Serverless",
+      "FaaS",
+      "Event-Driven",
+      "Cold Starts",
+      "State Management",
+      "Cost Optimization"
+    ],
+    examples: [
+      "AWS Lambda",
+      "Azure Functions",
+      "Google Cloud Functions",
+      "Serverless Applications",
+      "Event-Driven Systems"
+    ],
+    resources: [
+      "Serverless Architecture",
+      "AWS Lambda Guide",
+      "Event-Driven Design",
+      "Serverless Best Practices"
+    ]
+  },
+  {
+    id: 47,
+    title: "Data Pipeline and ETL Systems",
+    description: "Build robust data pipelines for extracting, transforming, and loading data at scale.",
+    category: "Architecture",
+    difficulty: "Intermediate",
+    duration: "65 min",
+    topics: [
+      "ETL Pipeline Design",
+      "Data Ingestion Patterns",
+      "Data Transformation",
+      "Data Quality Management",
+      "Pipeline Orchestration",
+      "Monitoring and Alerting"
+    ],
+    concepts: [
+      "ETL Pipeline",
+      "Data Ingestion",
+      "Data Transformation",
+      "Data Quality",
+      "Pipeline Orchestration",
+      "Data Monitoring"
+    ],
+    examples: [
+      "Apache Airflow",
+      "Apache NiFi",
+      "AWS Glue",
+      "Data Pipeline Tools",
+      "ETL Best Practices"
+    ],
+    resources: [
+      "Data Pipeline Design",
+      "Apache Airflow Guide",
+      "ETL Best Practices",
+      "Data Quality Management"
+    ]
+  },
+  {
+    id: 48,
+    title: "Content Delivery and CDN Optimization",
+    description: "Optimize content delivery networks for global performance and user experience.",
+    category: "Performance",
+    difficulty: "Intermediate",
+    duration: "55 min",
+    topics: [
+      "CDN Architecture",
+      "Edge Caching",
+      "Content Optimization",
+      "Geographic Distribution",
+      "Cache Invalidation",
+      "Performance Monitoring"
+    ],
+    concepts: [
+      "CDN",
+      "Edge Caching",
+      "Content Optimization",
+      "Geographic Distribution",
+      "Cache Invalidation",
+      "Performance Monitoring"
+    ],
+    examples: [
+      "Cloudflare",
+      "AWS CloudFront",
+      "Akamai",
+      "CDN Optimization",
+      "Global Content Delivery"
+    ],
+    resources: [
+      "CDN Architecture",
+      "Cloudflare Documentation",
+      "Content Optimization",
+      "CDN Best Practices"
+    ]
+  },
+  {
+    id: 49,
+    title: "Database Migration and Schema Evolution",
+    description: "Manage database schema changes and migrations in production systems.",
+    category: "Databases",
+    difficulty: "Intermediate",
+    duration: "60 min",
+    topics: [
+      "Schema Migration Strategies",
+      "Zero-Downtime Migrations",
+      "Data Migration",
+      "Backward Compatibility",
+      "Rollback Strategies",
+      "Migration Testing"
+    ],
+    concepts: [
+      "Schema Migration",
+      "Zero-Downtime",
+      "Data Migration",
+      "Backward Compatibility",
+      "Rollback Strategies",
+      "Migration Testing"
+    ],
+    examples: [
+      "Flyway",
+      "Liquibase",
+      "Alembic",
+      "Database Migrations",
+      "Schema Evolution"
+    ],
+    resources: [
+      "Database Migration Guide",
+      "Flyway Documentation",
+      "Schema Evolution",
+      "Migration Best Practices"
+    ]
+  },
+  {
+    id: 50,
+    title: "API Gateway and BFF Patterns",
+    description: "Design API gateways and backend-for-frontend patterns for microservices.",
+    category: "Architecture",
+    difficulty: "Intermediate",
+    duration: "55 min",
+    topics: [
+      "API Gateway Architecture",
+      "Backend for Frontend (BFF)",
+      "Authentication and Authorization",
+      "Rate Limiting",
+      "Request Routing",
+      "API Composition"
+    ],
+    concepts: [
+      "API Gateway",
+      "BFF Pattern",
+      "Authentication",
+      "Rate Limiting",
+      "Request Routing",
+      "API Composition"
+    ],
+    examples: [
+      "Kong API Gateway",
+      "AWS API Gateway",
+      "Azure API Management",
+      "BFF Implementation",
+      "API Gateway Patterns"
+    ],
+    resources: [
+      "API Gateway Design",
+      "BFF Pattern Guide",
+      "Kong Documentation",
+      "API Gateway Best Practices"
+    ]
   }
 ];
 
@@ -957,7 +1882,8 @@ export const categories = [
   "E-commerce",
   "Communication",
   "Web Services",
-  "Storage"
+  "Storage",
+  "Observability"
 ];
 
 export const difficultyLevels = [
